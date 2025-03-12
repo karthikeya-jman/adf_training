@@ -5,12 +5,20 @@
 			"referenceName": "test_2_sql",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"tab_name": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "AzureSqlTable",
 		"schema": [],
 		"typeProperties": {
-			"schema": "raw",
-			"table": "extracted_data"
+			"schema": "src",
+			"table": {
+				"value": "@dataset().tab_name",
+				"type": "Expression"
+			}
 		}
 	}
 }
