@@ -2,8 +2,13 @@
 	"name": "DelimitedText2",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "source_files",
+			"referenceName": "new_service",
 			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"parent_name": {
+				"type": "string"
+			}
 		},
 		"annotations": [],
 		"type": "DelimitedText",
