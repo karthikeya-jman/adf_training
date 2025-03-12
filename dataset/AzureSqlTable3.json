@@ -14,6 +14,7 @@
 		"type": "AzureSqlTable",
 		"schema": [],
 		"typeProperties": {
+			"schema": "src",
 			"table": {
 				"value": "@dataset().file_name",
 				"type": "Expression"
