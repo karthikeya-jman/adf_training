@@ -1,0 +1,23 @@
+{
+	"name": "AzureSqlTable3",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "task1",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"file_name": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"table": {
+				"value": "@dataset().file_name",
+				"type": "Expression"
+			}
+		}
+	}
+}
