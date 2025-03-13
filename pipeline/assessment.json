@@ -79,9 +79,9 @@
 			"src_tables": {
 				"type": "array",
 				"defaultValue": [
-					"products",
-					"customers",
-					"transaction"
+					"PRODUCTS",
+					"CUSTOMERS",
+					"TRANSACTION"
 				]
 			}
 		},
