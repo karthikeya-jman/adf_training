@@ -20,11 +20,29 @@
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
-					"enableStaging": false
+					"sink": {
+						"type": "SnowflakeV2Sink",
+						"importSettings": {
+							"type": "SnowflakeImportCopyCommand"
+						}
+					},
+					"enableStaging": true,
+					"stagingSettings": {
+						"linkedServiceName": {
+							"referenceName": "ls_blob_to_snowflake",
+							"type": "LinkedServiceReference"
+						}
+					}
 				},
 				"inputs": [
 					{
 						"referenceName": "ssms_local_dataset",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "SnowflakeTable1",
 						"type": "DatasetReference"
 					}
 				]

@@ -1,16 +1,16 @@
 {
-	"name": "ssms_local_dataset",
+	"name": "SnowflakeTable1",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "ssms_local_connection",
+			"referenceName": "snowflake_fitness_tracker",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
-		"type": "SqlServerTable",
+		"type": "SnowflakeV2Table",
 		"schema": [],
 		"typeProperties": {
-			"schema": "dbo",
-			"table": "products"
+			"schema": "RAW",
+			"table": "PRODUCTS"
 		}
 	}
 }
