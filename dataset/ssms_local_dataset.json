@@ -1,0 +1,12 @@
+{
+	"name": "ssms_local_dataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ssms_local_connection",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": []
+	}
+}
