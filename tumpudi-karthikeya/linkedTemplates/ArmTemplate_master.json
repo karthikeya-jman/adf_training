@@ -1,0 +1,259 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "tumpudi-karthikeya"
+		},
+		"AzureBlobStorage_task1_src_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage_task1_src'"
+		},
+		"AzureSqlDatabase1_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'AzureSqlDatabase1'"
+		},
+		"AzureSqlDatabase2_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'AzureSqlDatabase2'"
+		},
+		"get_file_name_src_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'get_file_name_src'"
+		},
+		"new_service_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'new_service'"
+		},
+		"snowflake_fitness_tracker_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'snowflake_fitness_tracker'"
+		},
+		"source_files_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'source_files'"
+		},
+		"ssms_local_connection_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ssms_local_connection'"
+		},
+		"task1_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'task1'"
+		},
+		"test_2_sql_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'test_2_sql'"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "server126.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "master"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "karthikeya"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "server126.database.windows.net"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "retail_data"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "karthikeya"
+		},
+		"RestService1_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://jsonplaceholder.typicode.com/users"
+		},
+		"ls_blob_to_snowflake_sasUri": {
+			"type": "secureString",
+			"metadata": "Secure string for 'sasUri' of 'ls_blob_to_snowflake'"
+		},
+		"snowflake_fitness_tracker_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "FITNESS_TRACKER"
+		},
+		"snowflake_fitness_tracker_properties_typeProperties_role": {
+			"type": "string",
+			"defaultValue": "ACCOUNTADMIN"
+		},
+		"snowflake_fitness_tracker_properties_typeProperties_host": {
+			"type": "string",
+			"defaultValue": "VCRXJUU-YR57661.snowflakecomputing.com"
+		},
+		"ssms_local_connection_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "JM-DKT-002"
+		},
+		"ssms_local_connection_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "fitness_tracker"
+		},
+		"ssms_local_connection_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "sa"
+		},
+		"task1_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "server126.database.windows.net"
+		},
+		"task1_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "retail_data"
+		},
+		"task1_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "karthikeya"
+		},
+		"task_2_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://jsonplaceholder.typicode.com/users"
+		},
+		"test_2_sql_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "server126.database.windows.net"
+		},
+		"test_2_sql_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "retail_data"
+		},
+		"test_2_sql_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "karthikeya"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "tumpudi-karthikeya_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureBlobStorage_task1_src_connectionString": {
+						"value": "[parameters('AzureBlobStorage_task1_src_connectionString')]"
+					},
+					"AzureSqlDatabase1_password": {
+						"value": "[parameters('AzureSqlDatabase1_password')]"
+					},
+					"AzureSqlDatabase2_password": {
+						"value": "[parameters('AzureSqlDatabase2_password')]"
+					},
+					"get_file_name_src_connectionString": {
+						"value": "[parameters('get_file_name_src_connectionString')]"
+					},
+					"new_service_connectionString": {
+						"value": "[parameters('new_service_connectionString')]"
+					},
+					"snowflake_fitness_tracker_password": {
+						"value": "[parameters('snowflake_fitness_tracker_password')]"
+					},
+					"source_files_connectionString": {
+						"value": "[parameters('source_files_connectionString')]"
+					},
+					"task1_password": {
+						"value": "[parameters('task1_password')]"
+					},
+					"test_2_sql_password": {
+						"value": "[parameters('test_2_sql_password')]"
+					},
+					"ssms_local_connection_password": {
+						"value": "[parameters('ssms_local_connection_password')]"
+					},
+					"AzureSqlDatabase1_properties_typeProperties_server": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_server')]"
+					},
+					"AzureSqlDatabase1_properties_typeProperties_database": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_database')]"
+					},
+					"AzureSqlDatabase1_properties_typeProperties_userName": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_userName')]"
+					},
+					"AzureSqlDatabase2_properties_typeProperties_server": {
+						"value": "[parameters('AzureSqlDatabase2_properties_typeProperties_server')]"
+					},
+					"AzureSqlDatabase2_properties_typeProperties_database": {
+						"value": "[parameters('AzureSqlDatabase2_properties_typeProperties_database')]"
+					},
+					"AzureSqlDatabase2_properties_typeProperties_userName": {
+						"value": "[parameters('AzureSqlDatabase2_properties_typeProperties_userName')]"
+					},
+					"RestService1_properties_typeProperties_url": {
+						"value": "[parameters('RestService1_properties_typeProperties_url')]"
+					},
+					"ls_blob_to_snowflake_sasUri": {
+						"value": "[parameters('ls_blob_to_snowflake_sasUri')]"
+					},
+					"snowflake_fitness_tracker_properties_typeProperties_database": {
+						"value": "[parameters('snowflake_fitness_tracker_properties_typeProperties_database')]"
+					},
+					"snowflake_fitness_tracker_properties_typeProperties_role": {
+						"value": "[parameters('snowflake_fitness_tracker_properties_typeProperties_role')]"
+					},
+					"snowflake_fitness_tracker_properties_typeProperties_host": {
+						"value": "[parameters('snowflake_fitness_tracker_properties_typeProperties_host')]"
+					},
+					"task1_properties_typeProperties_server": {
+						"value": "[parameters('task1_properties_typeProperties_server')]"
+					},
+					"task1_properties_typeProperties_database": {
+						"value": "[parameters('task1_properties_typeProperties_database')]"
+					},
+					"task1_properties_typeProperties_userName": {
+						"value": "[parameters('task1_properties_typeProperties_userName')]"
+					},
+					"task_2_properties_typeProperties_url": {
+						"value": "[parameters('task_2_properties_typeProperties_url')]"
+					},
+					"test_2_sql_properties_typeProperties_server": {
+						"value": "[parameters('test_2_sql_properties_typeProperties_server')]"
+					},
+					"test_2_sql_properties_typeProperties_database": {
+						"value": "[parameters('test_2_sql_properties_typeProperties_database')]"
+					},
+					"test_2_sql_properties_typeProperties_userName": {
+						"value": "[parameters('test_2_sql_properties_typeProperties_userName')]"
+					},
+					"ssms_local_connection_properties_typeProperties_server": {
+						"value": "[parameters('ssms_local_connection_properties_typeProperties_server')]"
+					},
+					"ssms_local_connection_properties_typeProperties_database": {
+						"value": "[parameters('ssms_local_connection_properties_typeProperties_database')]"
+					},
+					"ssms_local_connection_properties_typeProperties_userName": {
+						"value": "[parameters('ssms_local_connection_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}

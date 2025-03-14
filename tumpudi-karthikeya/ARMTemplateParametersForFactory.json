@@ -1,0 +1,102 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "tumpudi-karthikeya"
+		},
+		"AzureBlobStorage_task1_src_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_password": {
+			"value": ""
+		},
+		"AzureSqlDatabase2_password": {
+			"value": ""
+		},
+		"get_file_name_src_connectionString": {
+			"value": ""
+		},
+		"new_service_connectionString": {
+			"value": ""
+		},
+		"snowflake_fitness_tracker_password": {
+			"value": ""
+		},
+		"source_files_connectionString": {
+			"value": ""
+		},
+		"ssms_local_connection_password": {
+			"value": ""
+		},
+		"task1_password": {
+			"value": ""
+		},
+		"test_2_sql_password": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"value": "server126.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"value": "master"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"value": "karthikeya"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_server": {
+			"value": "server126.database.windows.net"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_database": {
+			"value": "retail_data"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_userName": {
+			"value": "karthikeya"
+		},
+		"RestService1_properties_typeProperties_url": {
+			"value": "https://jsonplaceholder.typicode.com/users"
+		},
+		"ls_blob_to_snowflake_sasUri": {
+			"value": ""
+		},
+		"snowflake_fitness_tracker_properties_typeProperties_database": {
+			"value": "FITNESS_TRACKER"
+		},
+		"snowflake_fitness_tracker_properties_typeProperties_role": {
+			"value": "ACCOUNTADMIN"
+		},
+		"snowflake_fitness_tracker_properties_typeProperties_host": {
+			"value": "VCRXJUU-YR57661.snowflakecomputing.com"
+		},
+		"ssms_local_connection_properties_typeProperties_server": {
+			"value": "JM-DKT-002"
+		},
+		"ssms_local_connection_properties_typeProperties_database": {
+			"value": "fitness_tracker"
+		},
+		"ssms_local_connection_properties_typeProperties_userName": {
+			"value": "sa"
+		},
+		"task1_properties_typeProperties_server": {
+			"value": "server126.database.windows.net"
+		},
+		"task1_properties_typeProperties_database": {
+			"value": "retail_data"
+		},
+		"task1_properties_typeProperties_userName": {
+			"value": "karthikeya"
+		},
+		"task_2_properties_typeProperties_url": {
+			"value": "https://jsonplaceholder.typicode.com/users"
+		},
+		"test_2_sql_properties_typeProperties_server": {
+			"value": "server126.database.windows.net"
+		},
+		"test_2_sql_properties_typeProperties_database": {
+			"value": "retail_data"
+		},
+		"test_2_sql_properties_typeProperties_userName": {
+			"value": "karthikeya"
+		}
+	}
+}
